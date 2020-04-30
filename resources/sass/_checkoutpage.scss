@@ -1,0 +1,34 @@
+.df-page-checkout {
+
+}
+
+.df-order-details {
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 0 0 32px;
+    height: auto;
+    width: 734px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.df-order-title {
+    background: $baseColor;
+    color: #fff;
+    padding: 18px 24px 17px;
+
+    p {
+        font-weight: bold;
+        line-height: rem(16);
+        text-transform: uppercase;
+    }
+}
+
+.df-order-info {
+
+}
+
+.df-order-contact {
+    
+}

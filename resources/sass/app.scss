@@ -1,1 +1,12 @@
-//
+@import './fonts';
+@import './variables';
+@import './mixins';
+
+// load base style for site
+@import './grid';
+@import './typography';
+@import './basestyle';
+
+// load styles for pages
+@import './welcomepage';
+@import './checkoutpage';

@@ -1,0 +1,47 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Averta', sans-serif;
+    font-size: rem(16);
+    color: #130033;
+    font-style: normal;
+    font-weight: normal;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.df-text-blue {
+    color: $blueColor;
+}
+
+.df-text-purple {
+    color: $baseColor;
+}
+
+.df-underline {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        background: $blueColor;
+        opacity: 0.15;
+    }
+}
+
+.df-grey-bg {
+    background: linear-gradient(180deg, rgba(217, 223, 230, 0.2) 0%, rgba(217, 223, 230, 0) 100%);
+}
