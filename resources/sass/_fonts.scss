@@ -1,23 +1,15 @@
 @font-face {
-    font-family: 'Averta';
-    src: url('/fonts/averta/AvertaDemoPE-Regular.eot');
-    src: local('Averta Demo PE Regular'), local('AvertaDemoPE-Regular'),
-        url('/fonts/averta/AvertaDemoPE-Regular.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/averta/AvertaDemoPE-Regular.woff2') format('woff2'),
-        url('/fonts/averta/AvertaDemoPE-Regular.woff') format('woff'),
-        url('/fonts/averta/AvertaDemoPE-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'AvertaBold';
+	src: url('/fonts/averta/AvertaBold.eot');
+	src: local('☺'), url('/fonts/averta/AvertaBold.woff') format('woff'), url('/fonts/averta/AvertaBold.ttf') format('truetype'), url('/fonts/averta/AvertaBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'AvertaBoldItalic';
-    src: url('/fonts/averta/AvertaDemoPE-ExtraboldItalic.eot');
-    src: local('Averta Demo PE Extrabold Italic'), local('AvertaDemoPE-ExtraboldItalic'),
-        url('/fonts/averta/AvertaDemoPE-ExtraboldItalic.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/averta/AvertaDemoPE-ExtraboldItalic.woff2') format('woff2'),
-        url('/fonts/averta/AvertaDemoPE-ExtraboldItalic.woff') format('woff'),
-        url('/fonts/averta/AvertaDemoPE-ExtraboldItalic.ttf') format('truetype');
-    font-weight: 800;
-    font-style: italic;
+	font-family: 'AvertaRegular';
+	src: url('/fonts/averta/AvertaRegular.eot');
+	src: local('☺'), url('/fonts/averta/AvertaRegular.woff') format('woff'), url('/fonts/averta/AvertaRegular.ttf') format('truetype'), url('/fonts/averta/AvertaRegular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }

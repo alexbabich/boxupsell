@@ -1,16 +1,31 @@
 .df-page-checkout {
 
+    @include tablet {
+        padding: 50px 0;
+    }
+
+    .df-page-title {
+        display: none;
+
+        @include tablet {
+            display: block;
+        }
+    }
 }
 
 .df-order-details {
     background: #fff;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
     padding: 0 0 32px;
     height: auto;
-    width: 734px;
+    width: 100%;
     overflow: hidden;
     margin: auto;
+
+    @include tablet {
+        width: 734px;
+        border-radius: 10px;
+    }
 }
 
 .df-order-title {
@@ -26,9 +41,57 @@
 }
 
 .df-order-info {
+    flex-direction: column;
+    padding: 32px 25px;
+    text-align: center;
 
+    @include tablet {
+        flex-direction: row;
+        padding: 32px 49px 32px 31px;
+    }
+
+    .df-product-price-info {
+
+        @include tablet {
+            width: 331px;
+        }
+    
+        .df-product-price-item {
+            padding: 18px 0 16px;
+    
+            h4 {
+                margin: 0;
+            }
+        }
+    
+        .df-product-price-item:not(:last-child) {
+            border-bottom: 1px solid #E3E3E3;
+        }
+    }
 }
 
 .df-order-contact {
-    
+    padding: 25px;
+    width: calc(100% - 50px);
+
+    @include tablet {
+        width: calc(100% - 80px);
+        padding: 34px 49px 0 31px;
+    }
+
+    .df-order-contact-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        &:not(:last-child) {
+            align-items: flex-start;
+            margin-bottom: 26px;
+        }
+
+        .df-button-confirm {
+            width: 223px;
+        }
+    }
 }

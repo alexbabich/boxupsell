@@ -14,9 +14,10 @@
 }
 
 .df-container {
-    width: 100%;
+    width: calc(100% - 30px);
     margin: auto;
     padding: 0 15px;
+    overflow: hidden;
 
     @include mobileL {
         max-width: 540px;

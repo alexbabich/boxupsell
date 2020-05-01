@@ -8,15 +8,45 @@
 
     .df-page-subtitle {
         @include margin($bottom: 8px);
+        line-height: rem(40);
+
+        @include tablet {
+            line-height: rem(24);
+        }
     }
 
     .df-page-description {
-        @include margin($bottom: 24px);
-        @include margin($media: $media-tablet, $bottom: 32px);
+        @include margin($bottom: 24px, $top: 14px);
+        @include margin($media: $media-tablet, $bottom: 32px, $top: 40px);
         max-width: 800px;
 
         @include tablet {
             text-align: center;
+        }
+    }
+
+    .df-image {
+
+        svg {
+            max-width: 100%;
+        }
+    }
+
+    .df-second-title {
+        text-align: center;
+
+        h2 {
+            font-size: rem(24);
+            line-height: rem(32);
+
+            @include tablet {
+                font-size: rem(40);
+                line-height: rem(50);  
+            }
+        }
+
+        .df-link {
+            font-family: 'AvertaBold', sans-serif;
         }
     }
 }
@@ -29,16 +59,21 @@
     &:before {
         content: '';
         position: absolute;
-        width: calc(100% - 120px);
+        width: calc(100% - 105px);
         height: 2px;
         background: #c4c4c4;
         top: 7px;
         bottom: 0;
-        left: 65px;
+        left: 55px;
 
         @include mobileM {
-            width: calc(100% - 140px);
-            left: 78px;
+            width: calc(100% - 130px);
+            left: 65px;
+        }
+
+        @include mobileL {
+            width: calc(100% - 130px);
+            left: 70px;
         }
     }
 
@@ -51,26 +86,40 @@
             height: 2px;
             top: 7px;
             bottom: 0;
-            left: 78px; 
+            left: 55px;
+
+            @include mobileM {
+                left: 65px;
+            }
+
+            @include mobileL {
+                left: 75px;
+            }
         }
     }
 
     &.df-pass-first-step {
 
         &:after {
-            width: calc(50% - 70px);
+            width: calc(50% - 60px);
+
+            @include mobileM {
+                width: calc(50% - 70px);
+            }
+
+            @include mobileL {
+                // width: calc(50% - 80px);
+            }
         }
     }
 
     &.df-pass-second-step {
 
         &:after {
-            width: calc(100% - 120px);
-            left: 65px;
+            width: calc(100% - 105px);
 
             @include mobileM {
-                width: calc(100% - 140px);
-                left: 78px;
+                width: calc(100% - 130px);
             }
         }
     }
@@ -148,6 +197,10 @@
         flex-direction: row;
         margin-bottom: 16px;
     }
+
+    h5 {
+        margin-bottom: 30px;
+    }
 }
 
 .df-list-essential-fiber {
@@ -201,8 +254,178 @@
 }
 
 .df-product-list {
-   
-    .df-product-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 
+    @include tabletL {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+   
+    .df-product-wrapper {
+        position: relative;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        width: 100%;
+        height: 590px;
+        background: #fff;
+        z-index: 2;
+        margin-bottom: 30px;
+
+        @include mobileL {
+            width: 300px; 
+        }
+
+        @include laptopL {
+            width: 370px;
+            height: 535px;
+        }
+
+        &.df-most-popular {
+
+            .df-most-popular-title {
+                background: #E8DFF7;
+                border-radius: 10px;
+                position: absolute;
+                height: calc(100% + 56px);
+                width: calc(100% + 120px);
+                top: -46px;
+                z-index: 1;
+                display: block;
+                left: calc(-50% + 120px);
+
+                @include tablet {
+                    width: calc(100% + 20px);
+                    left: -10px;
+                }
+
+                p {
+                    color: $baseColor;
+                    font-size: rem(16);
+                    line-height: rem(16);
+                    text-transform: uppercase;
+                    text-align: center;
+                    letter-spacing: 0;
+                    margin-top: 12px;
+                    font-family: 'AvertaBold', sans-serif;
+
+                    span {
+                        margin-right: 10px;
+                        position: relative;
+                        top: 2px;
+                    }
+                }
+            }
+        }
+
+        .df-product-item {
+            height: calc(100% - 80px);
+            position: relative;
+            z-index: 2;
+            background: #fff;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .df-safe-mony {
+            background: linear-gradient(90deg, #BB057D 0%, #5E00D7 100%);
+            border-radius: 20px 0 0 20px;
+            letter-spacing: 0;
+            color: #fff;
+            font-weight: bold;
+            font-size: rem(12);
+            line-height: rem(12);
+            width: 108px;
+            height: 34px;
+            position: absolute;
+            top: 38px;
+            right: 0;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .df-poduct-title {
+            font-size: rem(24);
+            line-height: rem(24);
+            font-family: 'AvertaBold', sans-serif;
+        }
+
+        .df-product-image {
+            margin-top: 32px;
+            margin-bottom: 25px;
+            width: 100%;
+            text-align: center;
+
+            svg {
+                max-width: 100%;
+            }
+        }
+
+        .df-product-info {
+            text-align: center;
+
+            @include tablet {
+                text-align: left;
+            }
+            
+            p {
+                margin-bottom: 8px;
+                line-height: rem(24);
+                display: flex;
+                flex-direction: column;
+
+                @include tablet {
+                    display: block;
+                }
+
+                span:not(:last-child) {
+                    position: relative;
+                    margin-bottom: 8px;
+
+                    @include tablet {
+                        margin-bottom: 0;
+
+                        &:after {
+                            content: "•";
+                            margin: 0 3px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .df-product-price {
+            margin-bottom: 25px;
+            text-align: center;
+
+            @include tablet {
+                text-align: left;
+            }
+
+            &:first-letter {
+                vertical-align: top;
+                font-family: 'AvertaBold', sans-serif;
+                font-size: rem(24);
+                line-height: rem(24);
+                margin-right: 10px;
+            }
+
+            b {
+                font-size: rem(54);
+                line-height: rem(48);
+                font-family: 'AvertaBold', sans-serif;
+            }
+        }
+
+        .df-buy-button {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+        }
     }
 }
